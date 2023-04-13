@@ -11,9 +11,15 @@ function MainNavigation() {
                 <li className="nav-item">
                     <Link to="/tagesmenu" className="nav-link"> Tagesmenü</Link>
                 </li>
-                <li>
+                <li className="nav-item">
                     <Link to="/lunch-menu" className="nav-link">Mittagsmenü</Link>
                 </li>
+                <li className="nav-item">
+                    <Link to="/login" className="nav-link">Login</Link>
+                </li>
+                {/*<li className="nav-item">*/}
+                {/*    <Link to="/eingeloggt" className="nav-link">Eingeloggt</Link>*/}
+                {/*</li>*/}
             </ul>
         </nav>
     );

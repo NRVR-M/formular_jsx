@@ -1,9 +1,13 @@
 import './styles/App.css';
 import './styles/custom.scss';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+//Pages
 import Home from './pages/Home';
 import Tagesmenu from './pages/Tagesmenu'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import LunchMenu from "./pages/LunchMenu";
+import Login from "./pages/Login";
+import Eingeloggt from "./pages/Eingeloggt";
 
 function App() {
 
@@ -20,14 +24,24 @@ function App() {
     {
       path: "/lunch-menu",
       element: <LunchMenu />
-    }
+    },
+    {
+      path: "/login",
+      element: <Login />
+
+    },
+    {
+      path: "/eingeloggt",
+      element: <Eingeloggt />
+
+    },
 
   ]);
 
   return (
 
     <>
-      {/* <MainNavigation /> */}
+
       <RouterProvider router={router} />
     </>
 
