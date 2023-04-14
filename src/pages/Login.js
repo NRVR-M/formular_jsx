@@ -6,7 +6,7 @@ function Login() {
     return (
         <div>
             <header>
-                <MainNavigation />
+                {/*<MainNavigation />*/}
             </header>
             <LoginForm />
 

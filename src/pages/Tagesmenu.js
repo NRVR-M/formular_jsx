@@ -7,9 +7,9 @@ function Tagesmenu() {
 
     return (
         <div>
-            <header>
-                <MainNavigation />
-            </header>
+            {/*<header>*/}
+            {/*    <MainNavigation />*/}
+            {/*</header>*/}
             <h1>
                 <p>Aktuelles Angebot Alle Preisangaben in CHF</p>
             </h1>

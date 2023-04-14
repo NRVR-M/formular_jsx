@@ -34,9 +34,9 @@ function LunchMenu() {
 
     return (
         <div className="container">
-            <header>
-                <MainNavigation/>
-            </header>
+            {/*<header>*/}
+            {/*    <MainNavigation/>*/}
+            {/*</header>*/}
             <h1>Aktuelle Angebote</h1>
 
             {/* cf. https://react.dev/learn/passing-props-to-a-component#passing-props-to-a-component */}
