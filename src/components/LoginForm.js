@@ -1,21 +1,26 @@
 import React from "react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 
 export default function LoginForm() {
 
-    const navigate = useNavigate();
-
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
+    const [errorMessage, setErrorMessage] = useState("");
+
+    const navigate = useNavigate();
+
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/eingeloggt";
     
 
 async function handleLogin(e) {
     e.preventDefault();
 
-    const users = { username: (username), password: (password)};
+    const users = {username: (username), password: (password)};
+
     try {
         const response = await fetch("https://4dtestapi.dataquest.ch/rest/v2/authentication/login", {
 
@@ -29,13 +34,29 @@ async function handleLogin(e) {
 
         });
 
-        const result = await response.json();
-        console.log("Success:", result);
-    }
-    catch (error) {
-        console.error("Error:", error);
+        const data = await response.json();
+        console.log(data);
+        if (data && data.authToken) {
+            // cf. https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+            localStorage.setItem("auth", data?.authToken);
+            setErrorMessage("");
+            navigate(from, {replace: true});
+        } else {
+            setErrorMessage("Fehler beim Login-Versuch: " + data.message);
+        }
+    } catch (error) {
+        console.error(error);
+        setErrorMessage("Unerwarteter Fehler beim Login-Versuch.");
     }
 }
+
+    //     const result = await response.json();
+    //     console.log("Success:", result);
+    // }
+    // catch (error) {
+    //     console.error("Error:", error);
+    // }
+    // }
 
     return (
         <form
