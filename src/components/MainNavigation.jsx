@@ -4,7 +4,7 @@ function MainNavigation() {
     return (
 
         <nav>
-            <ol className="nav">
+            <ul className="nav">
                 <li className="nav-item">
                     <Link to="/" className="nav-link">Home</Link>
                 </li>
@@ -20,7 +20,7 @@ function MainNavigation() {
                 {/*<li className="nav-item">*/}
                 {/*    <Link to="/eingeloggt" className="nav-link">Eingeloggt</Link>*/}
                 {/*</li>*/}
-            </ol>
+            </ul>
         </nav>
     );
 }
