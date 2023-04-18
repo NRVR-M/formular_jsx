@@ -1,7 +1,6 @@
 // import {BrowserRouter, Routes, Route, Outlet} from "react-router-dom";
 import { createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
 
-
 //components
 import Header from "./Header";
 import RequireAuth from "./RequireAuth";
@@ -11,7 +10,7 @@ import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Tagesmenu from "../pages/Tagesmenu";
 import LunchMenu from "../pages/LunchMenu";
-import Eingeloggt from "../pages/Eingeloggt";
+import Anmeldung from "../pages/Anmeldung";
 
 export default function Routes() {
 
@@ -23,23 +22,6 @@ export default function Routes() {
             </>
         )
     }
-
-    // const BrowserRoutes = () => {
-    //     return (
-    //             <BrowserRouter>
-    //                 <Routes>
-    //                     {/*Parent*/}
-    //                     <Route path="/" element={<Layout />}>
-    //                         {/*Children*/}
-    //                         <Route path="/" element={<Home />} />
-    //                         <Route path="login" element={<Login />} />
-    //                         <Route path="tagesmenu" element={<Tagesmenu />} />
-    //                         <Route path="lunch-menu" element={<LunchMenu />} />
-    //                     </Route>
-    //                 </Routes>
-    //             </BrowserRouter>
-    //         )
-    // }
 
 const BrowserRoutes = createBrowserRouter ([
     {
@@ -58,8 +40,8 @@ const BrowserRoutes = createBrowserRouter ([
                 element: <RequireAuth />,
                 children: [{
 
-                    path: "/eingeloggt",
-                    element: <Eingeloggt />
+                    path: "/anmeldung",
+                    element: <Anmeldung />
                 },]
             },
             {
@@ -76,7 +58,6 @@ const BrowserRoutes = createBrowserRouter ([
 ])
 
     return(
-            // <BrowserRoutes />
         <RouterProvider router={BrowserRoutes} />
     )
 }

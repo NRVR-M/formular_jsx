@@ -1,15 +1,10 @@
-// import MenuFormFinal from "../components/MenuFormFinal";
-import MainNavigation from "../components/MainNavigation";
-import MenuFormUseState from "../components/MenuFormUseState";
+import MenuFormUseState from "../components/MenuForm";
 
 function Tagesmenu() {
 
 
     return (
         <div>
-            {/*<header>*/}
-            {/*    <MainNavigation />*/}
-            {/*</header>*/}
             <h1>
                 <p>Aktuelles Angebot Alle Preisangaben in CHF</p>
             </h1>
@@ -32,7 +27,6 @@ function Tagesmenu() {
             <hr />
             <MenuFormUseState />
             <hr />
-            {/* <MenuFormFinal /> */}
 
         </div>
 
