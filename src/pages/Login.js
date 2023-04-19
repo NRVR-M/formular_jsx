@@ -8,10 +8,10 @@ export default function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
+
     const [errorMessage, setErrorMessage] = useState("");
 
     const navigate = useNavigate();
-
     const location = useLocation();
     const from = location.state?.from?.pathname || "/anmeldung";
 
@@ -23,10 +23,9 @@ export default function Login() {
 
 async function handleLogin(e) {
     e.preventDefault();
-    resetForm();
 
     const users = {username: (username), password: (password)};
-    // const userId = {firstName: (data.firstName), lastName: (data.lastName)};
+
 
     try {
         const response = await fetch("https://4dtestapi.dataquest.ch/rest/v2/authentication/login", {
@@ -53,7 +52,7 @@ async function handleLogin(e) {
         } else {
             // setErrorMessage("Fehler beim Login-Versuch: " + data.message);
             setErrorMessage("Benutzername oder Passwort falsch");
-
+            resetForm();
         }
     } catch (error) {
         console.error(error);
