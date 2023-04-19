@@ -1,4 +1,3 @@
-import MainNavigation from "../components/MainNavigation";
 import LunchItemForm from "../components/LunchItemForm";
 import {useState} from "react";
 import AverageLunchPrice from "../components/AverageLunchPrice";

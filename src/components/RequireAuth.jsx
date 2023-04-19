@@ -1,5 +1,5 @@
 import {Navigate, Outlet, useLocation, useNavigate} from "react-router-dom";
-import {useState} from "react";
+
 
 export default function RequireAuth() {
 
@@ -7,7 +7,6 @@ export default function RequireAuth() {
     const location = useLocation();
     const authToken = localStorage.getItem("auth") ?? null;
 
-    const [userid, setUserid] = useState("");
 
     if (!authToken) {
         return <Navigate to="/login" state={{from: location}} replace/>;

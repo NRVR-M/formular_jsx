@@ -1,4 +1,4 @@
-import React, {useState, useEffect, Component} from "react";
+import React, {useState, useEffect } from "react";
 
 //Component
 
@@ -6,7 +6,7 @@ import React, {useState, useEffect, Component} from "react";
 export default function GetPers() {
 
     const [persons, setPersons] = useState([]);
-    const [errorMessage, setErrorMessage] = useState("");
+
 
 
     async function getPersons() {
