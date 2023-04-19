@@ -15,11 +15,8 @@ function MainNavigation() {
                     <Link to="/lunch-menu" className="nav-link">Mittagsmenü</Link>
                 </li>
                 <li className="nav-item">
-                    <Link to="/login" className="nav-link">Login für Anmeldung</Link>
+                    <Link to="/anmeldung" className="nav-link">Anmeldung für Mittagessen</Link>
                 </li>
-                {/*<li className="nav-item">*/}
-                {/*    <Link to="/eingeloggt" className="nav-link">Eingeloggt</Link>*/}
-                {/*</li>*/}
             </ul>
         </nav>
     );

@@ -1,7 +1,6 @@
 import { useNavigate, useLocation } from "react-router-dom";
 
 
-import {userid} from "../components/RequireAuth";
 import React, {useState} from "react";
 
 function Anmeldung() {
