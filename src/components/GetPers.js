@@ -39,10 +39,10 @@ export default function GetPers() {
 
 return(
     <>
-        <div>
-            <label>Auswahl: </label>
-            <select name="personen" id="personen">
-                <option>Bitte wählen</option>
+        <div class="col-md-2">
+            <label htmlFor="mitarbeiter" className="form-label">Person</label>
+            <select class="form-select"  required>
+                <option value=""> Bitte wählen </option>
                 {persons.map(person => (
                     <option key={person.PersNr}>{person.NameVorname}</option>
                 ))}

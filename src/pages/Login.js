@@ -63,14 +63,15 @@ async function handleLogin(e) {
 
     return (
         <>
-            <form
-                id="LoginForm"
-                onSubmit={handleLogin}>
-
-                <br />
-                <div>
-                    <label htmlFor="username">Benutzername:</label>
+            <h1 style={{margin: 30, fontSize: 22}}>Login</h1>
+            <form class="row g-3"
+                  style={{margin: 20}}
+                    id="LoginForm"
+                    onSubmit={handleLogin}>
+                <div class="col-md-3">
                     <input
+                        class="form-control"
+                        placeholder="Benutzername"
                         id="username"
                         type="text"
                         value={username}
@@ -79,10 +80,10 @@ async function handleLogin(e) {
                         }}
                         required />
                 </div>
-                <div>
-                    <br />
-                    <label htmlFor="password">Passwort:</label>
+                <div class="col-md-3">
                     <input
+                        class="form-control"
+                        placeholder="Passwort"
                         id="password"
                         type="password"
                         value={password}
